@@ -37,9 +37,17 @@ nav ul, .logo{
     text-align: center;
     justify-content: center;
 }
-nav ul li{
-    padding: 0.5rem 1rem;
+nav ul li, .active{
+    padding: 0.3rem 1rem;
     font-weight: 500;
+}
+li:hover{
+    cursor: pointer;
+    color: var(--cor-link);
+    transition: 0.3 ease;
+}
+.active{
+    border-bottom: 3px solid var(--cor-link);
 }
 
 .inicio{
@@ -81,5 +89,60 @@ nav ul li{
 .hab:hover{
     background: var(--cor-corpo-light);
     transition: ease 0.5s;
-    transform:scaleY(1.1);
+    transform:scale(1.1);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card-container{
+    padding-block: 5rem;
+}
+
+.card-content{
+    margin-inline: 1.5rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.card-article{
+    width: 300px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.card-imagem{
+    position: relative;
+    background: var(--cor-link);
+    margin-top: 1.5rem;
+    margin-bottom: -.75rem;
+}
+
+.card-data{
+    background-color: var(--cor-link);
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.card-img{
+    width: 180px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+.card-shadow{
+    width: 200px;
+    height: 200px;
+    background-color: var(--font);
+    border-radius: 50%;
+    position: absolute;
+    top: 3.5rem;
 }
