@@ -7,7 +7,7 @@
 
 :root{
     --cor-corpo-light: rgb(248, 248, 248);
-    --cor-botao: blue;
+    --cor-botao: rgb(214, 214, 214);
     --cor-link: rgb(27, 192, 115);
     --cor-nav-light: rgb(255, 255, 255);
 
@@ -87,6 +87,8 @@ li:hover{
     margin:1rem;
 }
 .hab:hover{
+    box-shadow: 0.1rem 0.1rem 1rem var(--cor-link);
+    border: solid 2px var(--cor-link);
     background: var(--cor-corpo-light);
     transition: ease 0.5s;
     transform:scale(1.1);
@@ -101,12 +103,26 @@ li:hover{
 
 .card-container{
     padding-block: 5rem;
+    display: flex;
+    overflow-x: auto;
 }
+
+.card-container::-webkit-scrollbar {
+    background-color: var(--cor-botao);
+    width: 10px;
+}
+
+.card-container::-webkit-scrollbar-thumb {
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: var(--cor-link);
+}
+
 
 .card-content{
     margin-inline: 1.5rem;
     border-radius: 1.5rem;
-    overflow: hidden;
+    flex-flow: row nowrap;
 }
 
 .card-article{
@@ -123,9 +139,9 @@ li:hover{
 }
 
 .card-data{
-    background-color: var(--cor-link);
+    background-color: var(--cor-botao);
     padding: 1.5rem 2rem;
-    border-radius: 1rem;
+    border-radius: 0rem 0rem 1rem;
     text-align: center;
     position: relative;
     z-index: 10;
@@ -133,16 +149,26 @@ li:hover{
 
 .card-img{
     width: 180px;
+    height: 150px;
+    object-fit: cover;
     margin: 0 auto;
     position: relative;
     z-index: 5;
 }
 
-.card-shadow{
-    width: 200px;
-    height: 200px;
-    background-color: var(--font);
-    border-radius: 50%;
-    position: absolute;
-    top: 3.5rem;
+.card-description{
+    font-size: 0.9rem;
+}
+
+.card-button{
+    background-color: var(--cor-link);
+    text-decoration: none;
+    color: var(--cor-botao);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+.card-button:hover{
+    box-shadow: 0.1rem 0.1rem 1rem var(--cor-link);
+    border: solid 2px var(--cor-link);
+    transition: 0.2s ease;
 }
