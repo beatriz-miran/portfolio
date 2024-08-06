@@ -5,6 +5,8 @@
     padding: 0;
 }
 
+/*VARIÁVEIS*/
+
 :root{
     --cor-corpo-light: rgb(248, 248, 248);
     --cor-botao: rgb(214, 214, 214);
@@ -26,6 +28,8 @@ span{
     color: var(--cor-link)
 }
 
+/*MENU*/
+
 nav{
     background: var(--cor-nav-light);
     justify-content: center;
@@ -41,14 +45,54 @@ nav ul li, .active{
     padding: 0.3rem 1rem;
     font-weight: 500;
 }
+.menu {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu ul {
+    text-align: center;
+}
+
+.mobile-menu li a {
+    font-size: 2rem;
+    margin: 2rem;
+}
+
+.mobile-menu-icon {
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    width: 5rem;
+}
+.mobile-menu-icon button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.icon {
+    background-color: transparent;
+    width: 2.5rem;
+}
+
+.open {
+    display: block;
+}
 li:hover{
     cursor: pointer;
     color: var(--cor-link);
     transition: 0.3 ease;
 }
-.active{
+.ativo{
     border-bottom: 3px solid var(--cor-link);
 }
+
+
+/*INICIO*/
 
 .inicio{
     padding: 1rem;
@@ -94,6 +138,8 @@ li:hover{
     transform:scale(1.1);
 }
 
+/*PROJETOS*/
+
 .container{
     display: flex;
     justify-content: center;
@@ -105,6 +151,7 @@ li:hover{
     padding-block: 5rem;
     display: flex;
     overflow-x: auto;
+    margin-bottom: 1.5rem;
 }
 
 .card-container::-webkit-scrollbar {
@@ -134,7 +181,7 @@ li:hover{
 .card-imagem{
     position: relative;
     background: var(--cor-link);
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-bottom: -.75rem;
 }
 

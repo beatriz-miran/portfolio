@@ -1,37 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beatriz Miranda</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/f744b840f7.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 </head>
+
 <body>
-    <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+    <div class="mobile-menu-icon">
+        <button onClick="menuShow()"><img src="images/menu1.png" class="icon"></button>
+    </div>
+
+    <div class="logo"><span>Bia Miranda</span></div>
     <nav>
-        <div class="logo"><span>Bia Miranda</span></div>
-        <ul>
-            <li class="active">Sobre Mim</li>
+        <div class="hamburger active"></div>
+
+        <ul class="menu active">
+            <li class="ativo">Sobre Mim</li>
             <li>Projetos</li>
             <li>Contato</li>
         </ul>
+
+        
+
+        <div class="mobile-menu">
+            <ul>
+                <li>Sobre Mim</li>
+                <li>Projetos</li>
+                <li>Contato</li>
+            </ul>
+        </div>
     </nav>
-    
+
+    <script src="script.js"></script>
+
+
+
     <section class="inicio">
         <div class="ini-esq">
             <img class="ini-img" src="images/eu.jpg">
-            <h2>Beatriz Miranda</h2>
+            <h2 style="font-weight: bolder; margin-top: 1rem;">Beatriz Miranda</h2>
             <h4>Analista de Sistemas</h4>
         </div>
 
 
         <div class="ini-dir">
-            <p>Oii, tudo bem? Eu sou a Bia Miranda, tenho 19 anos, moro em Cajamar - SP e atualmente estou me graduando 
-                em Análise e Desenvolvimento de Sistemas pela FATEC. Amo a tecnologia e aprender cada vez mais coisas novas
-                sobre a área. Gosto muito da parte de desenvolvimento web, e adoraria te ajudar em solucionar as necessidades do 
+            <p>Oii, tudo bem? Eu sou a Bia Miranda, tenho 19 anos, moro em Cajamar - SP e atualmente estou me graduando
+                em Análise e Desenvolvimento de Sistemas pela FATEC. Amo a tecnologia e aprender cada vez mais coisas
+                novas
+                sobre a área. Gosto muito da parte de desenvolvimento web, e adoraria te ajudar em solucionar as
+                necessidades do
                 seu negócio!
             </p>
         </div>
@@ -41,7 +66,7 @@
 
     <span>Habilidades</span>
     <section class="habilidades">
-    
+
         <div class="hab">
             <i class="fa-brands fa-html5 fa-2xl" style="color: #1bc073;"></i>
         </div>
@@ -54,25 +79,26 @@
         <div class="hab">
             <i class="fa-brands fa-bootstrap fa-2xl" style="color: #1bc073;"></i>
         </div>
-        
+
     </section>
 
     <span>Projetos</span>
     <section class="projetos">
 
-        <div class="card-container" >
+        <div class="card-container">
             <div class="card-content">
                 <div class="">
                     <article class="card-article">
                         <div class="card-image">
                             <img src="images/loja funko pop.JPG" alt="image" class="card-img">
-                           
+
                         </div>
 
                         <div class="card-data">
                             <h3 class="card-name">Loja de Funko Pops</h3>
                             <p class="card-description">
-                                Feito com PHP, integrado com banco de dados. Possui cadastro e gerenciamento de produtos e clientes, gera ticket de compra e tem área do administrador.
+                                Feito com PHP, integrado com banco de dados. Possui cadastro e gerenciamento de produtos
+                                e clientes, gera ticket de compra e tem área do administrador.
                             </p>
 
                             <a href="#" class="card-button">Github</a>
@@ -87,10 +113,10 @@
                     <article class="card-article">
                         <div class="card-image">
                             <img src="images/sporfit.JPG" alt="image" class="card-img">
-                           
+
                         </div>
 
-                        <div class="card-data" >
+                        <div class="card-data">
                             <h3 class="card-name">Loja de Roupas Esportivas</h3>
                             <p class="card-description">
                                 Feito com HTML, CSS e JavaScript, inspirado em grandes lojas do ramo de moda esportiva.
@@ -104,13 +130,45 @@
 
         </div>
 
-        
-            
-        
+
+
+
 
     </section>
-    <section class="contato"></section>
+
+    <span>Contato</span>
+    <section class="contato">
+        <form action="" method="POST">
+            <input type="hidden" name="recipient" value="beatrizmds2005@gmail.com">
+            <!-- Pode ser qualquer endereço de email -->
+            <input type="hidden" name="subject" value="Contato de parceria"> <!-- Assunto da mensagem -->
+
+            <p>
+                Nome:<br />
+                <input type="text" size="30" name="nome">
+            </p>
+
+            <p>
+                E-mail:<br />
+                <input type="text" size="30" name="replyto">
+            </p>
+
+            <p>
+                Comentários:<br />
+                <input type="text" size="35" name="Comentarios">
+            </p>
+
+            <p>
+                <input type="submit" name="BTEnvia" value="Enviar">
+                <input type="reset" name="BTApaga" value="Apagar">
+            </p>
+        </form>
+
+    </section>
     <footer></footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
