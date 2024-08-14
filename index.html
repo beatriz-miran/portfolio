@@ -138,29 +138,28 @@
 
     <span>Contato</span>
     <section class="contato">
-        <form action="" method="POST">
-            <input type="hidden" name="recipient" value="beatrizmds2005@gmail.com">
-            <!-- Pode ser qualquer endereço de email -->
+        <form action="https://formsubmit.co/beatrizmds2005@gmail.com" method="POST">
             <input type="hidden" name="subject" value="Contato de parceria"> <!-- Assunto da mensagem -->
 
             <p>
-                Nome:<br />
-                <input type="text" size="30" name="nome">
+                <input type="text" name="nome" placeholder="Digite seu nome" required>
             </p>
 
             <p>
-                E-mail:<br />
-                <input type="text" size="30" name="replyto">
+                <input type="text" name="replyto" placeholder="Insira seu e-mail" required>
             </p>
 
             <p>
-                Comentários:<br />
-                <input type="text" size="35" name="Comentarios">
+                <input type="text" name="Comentarios" placeholder="Digite sua mensagem" required>
             </p>
 
             <p>
-                <input type="submit" name="BTEnvia" value="Enviar">
+                <input type="submit" value="Enviar">
                 <input type="reset" name="BTApaga" value="Apagar">
+                
+                <input type="hidden" name="_subject" value="novo contato">
+               
+                <input type="hidden" name="_captcha" value="false">
             </p>
         </form>
 
