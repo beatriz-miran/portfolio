@@ -14,27 +14,43 @@
 
 <body>
 
-    <div class="mobile-menu-icon">
-        <button onClick="menuShow()"><img src="images/menu1.png" class="icon"></button>
+    <div class="cabecalho">
+        <div class="mobile-menu-icon">
+            <button onClick="menuShow()"><img src="images/menu1.png" class="icon"></button>
+        </div>
+        <div class="logo"><span>Bia Miranda</span></div>
+
+
+        <ul class="menu active">
+            <a href="#sobre-mim">
+                <li class="ativo">Sobre Mim</li>
+            </a>
+            <a href="#projetos">
+                <li>Projetos</li>
+            </a>
+            <a href="#contato">
+                <li>Contato</li>
+            </a>
+        </ul>
+
     </div>
 
-    <div class="logo"><span>Bia Miranda</span></div>
     <nav>
         <div class="hamburger active"></div>
 
-        <ul class="menu active">
-            <li class="ativo">Sobre Mim</li>
-            <li>Projetos</li>
-            <li>Contato</li>
-        </ul>
 
-        
 
         <div class="mobile-menu">
             <ul>
-                <li>Sobre Mim</li>
-                <li>Projetos</li>
-                <li>Contato</li>
+                <a href="#sobre-mim">
+                    <li>Sobre Mim</li>
+                </a>
+                <a href="#projetos">
+                    <li>Projetos</li>
+                </a>
+                <a href="#contato">
+                    <li>Contato</li>
+                </a>
             </ul>
         </div>
     </nav>
@@ -42,8 +58,9 @@
     <script src="script.js"></script>
 
 
-
-    <section class="inicio">
+<div class="container-body">
+    <section class="inicio" id="sobre-mim">
+        
         <div class="ini-esq">
             <img class="ini-img" src="images/eu.jpg">
             <h2 style="font-weight: bolder; margin-top: 1rem;">Beatriz Miranda</h2>
@@ -68,21 +85,27 @@
     <section class="habilidades">
 
         <div class="hab">
-            <i class="fa-brands fa-html5 fa-2xl" style="color: #1bc073;"></i>
+            <img src="images/icons8-css3-50.png" alt="">
         </div>
         <div class="hab">
-            <i class="fa-brands fa-css3-alt fa-2xl" style="color: #1bc073;"></i>
+            <img src="images/icons8-html-50.png" alt="">
         </div>
         <div class="hab">
-            <i class="fa-brands fa-php fa-2xl" style="color: #1bc073;"></i>
+            <img src="images/icons8-bootstrap-50.png" alt="">
         </div>
         <div class="hab">
-            <i class="fa-brands fa-bootstrap fa-2xl" style="color: #1bc073;"></i>
+            <img src="images/icons8-php-50.png" alt="">
+        </div>
+        <div class="hab">
+            <img src="images/icons8-mysql-50.png" alt="">
+        </div>
+        <div class="hab">
+            <img src="images/icons8-figma-50.png" alt="">
         </div>
 
     </section>
 
-    <span>Projetos</span>
+    <span id="projetos">Projetos</span>
     <section class="projetos">
 
         <div class="card-container">
@@ -136,11 +159,11 @@
 
     </section>
 
-    <span>Contato</span>
+    <span id="contato">Contato</span>
     <section class="contato">
         <form action="https://formsubmit.co/beatrizmds2005@gmail.com" method="POST">
             <input type="hidden" name="subject" value="Contato de parceria"> <!-- Assunto da mensagem -->
-
+            <input type="hidden" name="_captcha" value="false">
             <p>
                 <input type="text" name="nome" placeholder="Digite seu nome" required>
             </p>
@@ -153,17 +176,15 @@
                 <input type="text" name="Comentarios" placeholder="Digite sua mensagem" required>
             </p>
 
-            <p>
+            <p class="botoes-form">
                 <input type="submit" value="Enviar">
                 <input type="reset" name="BTApaga" value="Apagar">
-                
-                <input type="hidden" name="_subject" value="novo contato">
-               
-                <input type="hidden" name="_captcha" value="false">
+
             </p>
         </form>
 
     </section>
+</div>
     <footer></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

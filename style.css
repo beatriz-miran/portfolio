@@ -29,6 +29,16 @@ span{
 }
 
 /*MENU*/
+.cabecalho{
+    position: fixed;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    margin-bottom: 3rem;
+}
 
 nav{
     background: var(--cor-nav-light);
@@ -91,6 +101,7 @@ nav ul li, .active{
 .icon {
     background-color: transparent;
     width: 2.5rem;
+    margin: 0.7rem;
 }
 
 .open {
@@ -109,6 +120,7 @@ li:hover{
 /*INICIO*/
 
 .inicio{
+    margin-top: 30px;
     padding: 1rem;
     justify-content: center;
     align-items: center;
@@ -228,10 +240,10 @@ li:hover{
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
 }
-.card-button:hover{
+.card-button:hover, input[type=submit]:hover, input[type=reset]:hover{
     box-shadow: 0.1rem 0.1rem 1rem var(--cor-link);
     border: solid 2px var(--cor-link);
-    transition: 0.2s ease;
+    transition: 0.2s;
 }
 
 form{
@@ -239,7 +251,83 @@ form{
    text-align: left;
    padding: 1rem 2rem;
 }
-form input{
+form input[type=text]{
     width: 90%;
     height: 2.5rem;
+    border: none;
+    border-bottom: solid 2px var(--cor-link);
+}
+
+input[type=submit], input[type=reset]{
+    padding: 0.5rem 3rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+input[type=submit]{
+    background-color: var(--cor-link);
+    color: var(--cor-corpo-light)
+}
+ul a li{
+    text-decoration: none;
+    color: black;
+}
+
+.botoes-form{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  .container-body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+  }
+  section{
+    max-width: 60rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .inicio{
+    display: flex;
+  }
+  .ini-esq{
+    width: 60%;
+  }
+  .ini-dir{
+    width: 40%;
+    text-align: left;
+  }
+  .ini-img{
+    width: 20rem;
+  }
+    .menu {
+        display:flex;
+    }
+    .cabecalho{
+        z-index: 111111111111;
+        justify-content: space-between;
+        padding: 1rem;
+        box-shadow: 0.1rem 0.1rem 1rem rgb(194, 194, 194);
+    }
+    .cabecalho .menu{
+        list-style: none;
+        gap: 1rem
+    }
+    .menu ul a li{
+        text-decoration: none;
+    }
+    .mobile-menu {
+        display: none;
+    }
+    .mobile-menu-icon{
+        display: none;
+    }
 }
