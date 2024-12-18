@@ -3,6 +3,7 @@
 *{
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 /*VARIÁVEIS*/
@@ -13,10 +14,10 @@
     --cor-link: rgb(27, 192, 115);
     --cor-nav-light: rgb(255, 255, 255);
 
-    --font: 'Poppins';
+    --familia-font: 'Poppins';
 }
 h1, h2, h3, h4, p, span, li{
-    font-family: var(--font);
+    font-family: var(--familia-font);
 }
 body{
     background: var(--cor-corpo-light);
@@ -39,7 +40,9 @@ span{
     width: 100%;
     margin-bottom: 3rem;
 }
-
+a{
+    text-decoration: none;
+}
 nav{
     background: var(--cor-nav-light);
     justify-content: center;
@@ -76,14 +79,20 @@ nav ul li, .active{
 @keyframes menuzinho{
    
 }
+a{
+    text-decoration: none;
+}
 
 .mobile-menu ul {
     text-align: center;
+    
+    text-decoration: none;
 }
 
 .mobile-menu li a {
     font-size: 2rem;
     margin: 2rem;
+    text-decoration: none;
 }
 
 .mobile-menu-icon {
@@ -172,25 +181,6 @@ li:hover{
     align-items: center;
     height: 100vh;
 }
-
-.card-container{
-    padding-block: 5rem;
-    display: flex;
-    overflow-x: auto;
-    margin-bottom: 1.5rem;
-}
-
-.card-container::-webkit-scrollbar {
-    background-color: var(--cor-botao);
-    width: 10px;
-}
-
-.card-container::-webkit-scrollbar-thumb {
-    margin-top: 10px;
-    border-radius: 10px;
-    background-color: var(--cor-link);
-}
-
 
 .card-content{
     margin-inline: 1.5rem;
@@ -326,6 +316,8 @@ ul a li{
     }
     .mobile-menu {
         display: none;
+        
+    text-decoration: none;
     }
     .mobile-menu-icon{
         display: none;
