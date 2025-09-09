@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -8,7 +8,7 @@
 
 /*VARIÁVEIS*/
 
-:root{
+:root {
     --cor-corpo-light: rgb(248, 248, 248);
     --cor-botao: rgb(214, 214, 214);
     --cor-link: rgb(27, 192, 115);
@@ -16,13 +16,22 @@
 
     --familia-font: 'Poppins';
 }
-h1, h2, h3, h4, p, span, li{
+
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+li {
     font-family: var(--familia-font);
 }
-body{
+
+body {
     background: var(--cor-corpo-light);
 }
-span{
+
+span {
     font-weight: 800;
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
@@ -30,7 +39,7 @@ span{
 }
 
 /*MENU*/
-.cabecalho{
+.cabecalho {
     position: fixed;
     display: flex;
     text-align: center;
@@ -40,24 +49,31 @@ span{
     width: 100%;
     margin-bottom: 3rem;
 }
-a{
+
+ul a li {
     text-decoration: none;
 }
-nav{
+
+nav {
     background: var(--cor-nav-light);
     justify-content: center;
 }
-nav ul, .logo{
+
+nav ul,
+.logo {
     text-decoration: none;
     list-style: none;
     display: flex;
     text-align: center;
     justify-content: center;
 }
-nav ul li, .active{
+
+nav ul li,
+.active {
     padding: 0.3rem 1rem;
     font-weight: 500;
 }
+
 .menu {
     display: none;
 }
@@ -65,9 +81,10 @@ nav ul li, .active{
 .mobile-menu {
     display: none;
 }
-.mobile-menu ul{
+
+.mobile-menu ul {
     flex-direction: column;
-    background-color:white;
+    background-color: white;
     margin-left: -1.5rem;
     margin-top: -3rem;
     position: absolute;
@@ -76,16 +93,15 @@ nav ul li, .active{
     animation-name: menuzinho;
 }
 
-@keyframes menuzinho{
-   
-}
-a{
+@keyframes menuzinho {}
+
+a {
     text-decoration: none;
 }
 
 .mobile-menu ul {
     text-align: center;
-    
+
     text-decoration: none;
 }
 
@@ -101,6 +117,7 @@ a{
     background-color: transparent;
     width: 5rem;
 }
+
 .mobile-menu-icon button {
     background-color: transparent;
     border: none;
@@ -116,45 +133,47 @@ a{
 .open {
     display: block;
 }
-li:hover{
+
+li:hover {
     cursor: pointer;
     color: var(--cor-link);
     transition: 0.3 ease;
 }
-.ativo{
+
+.ativo {
     border-bottom: 3px solid var(--cor-link);
 }
 
 
 /*INICIO*/
 
-.inicio{
+.inicio {
     margin-top: 30px;
     padding: 1rem;
     justify-content: center;
     align-items: center;
 }
 
-.inicio .ini-esq{
+.inicio .ini-esq {
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 0.7rem 0;
 }
 
-.ini-img{
+.ini-img {
     width: 13rem;
     border-radius: 50%;
 }
 
-.habilidades{
-  display: flex;
-  flex-wrap: wrap;
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
 
-  justify-content: center;
+    justify-content: center;
 }
 
-.hab{
+.hab {
     justify-content: center;
     text-align: center;
     background: var(--cor-nav-light);
@@ -163,45 +182,46 @@ li:hover{
     padding: 1rem;
     border-radius: 1rem;
 
-    margin:1rem;
+    margin: 1rem;
 }
-.hab:hover{
+
+.hab:hover {
     box-shadow: 0.1rem 0.1rem 1rem var(--cor-link);
     border: solid 2px var(--cor-link);
     background: var(--cor-corpo-light);
     transition: ease 0.5s;
-    transform:scale(1.1);
+    transform: scale(1.1);
 }
 
 /*PROJETOS*/
 
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.card-content{
+.card-content {
     margin-inline: 1.5rem;
     border-radius: 1.5rem;
     flex-flow: row nowrap;
 }
 
-.card-article{
+.card-article {
     width: 300px;
     border-radius: 1.5rem;
     overflow: hidden;
 }
 
-.card-imagem{
+.card-imagem {
     position: relative;
     background: var(--cor-link);
     margin-top: 1rem;
     margin-bottom: -.75rem;
 }
 
-.card-data{
+.card-data {
     background-color: var(--cor-botao);
     padding: 1.5rem 2rem;
     border-radius: 0rem 0rem 1rem;
@@ -210,7 +230,7 @@ li:hover{
     z-index: 10;
 }
 
-.card-img{
+.card-img {
     width: 180px;
     height: 150px;
     object-fit: cover;
@@ -219,107 +239,124 @@ li:hover{
     z-index: 5;
 }
 
-.card-description{
+.card-description {
     font-size: 0.9rem;
 }
 
-.card-button{
+.card-button {
     background-color: var(--cor-link);
     text-decoration: none;
     color: var(--cor-botao);
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
 }
-.card-button:hover, input[type=submit]:hover, input[type=reset]:hover{
+
+.card-button:hover,
+input[type=submit]:hover,
+input[type=reset]:hover {
     box-shadow: 0.1rem 0.1rem 1rem var(--cor-link);
     border: solid 2px var(--cor-link);
     transition: 0.2s;
 }
 
-form{
-   justify-content: center;
-   text-align: left;
-   padding: 1rem 2rem;
+form {
+    justify-content: center;
+    text-align: left;
+    padding: 1rem 2rem;
 }
-form input[type=text]{
+
+form input[type=text] {
     width: 90%;
     height: 2.5rem;
     border: none;
     border-bottom: solid 2px var(--cor-link);
 }
 
-input[type=submit], input[type=reset]{
+input[type=submit],
+input[type=reset] {
     padding: 0.5rem 3rem;
     border: none;
     border-radius: 0.5rem;
     margin: 1rem;
 }
-input[type=submit]{
+
+input[type=submit] {
     background-color: var(--cor-link);
     color: var(--cor-corpo-light)
 }
-ul a li{
+
+ul a li {
     text-decoration: none;
     color: black;
 }
 
-.botoes-form{
+.botoes-form {
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
 @media screen and (min-width: 800px) {
-  .container-body{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 50px;
-  }
-  section{
-    max-width: 60rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .inicio{
-    display: flex;
-  }
-  .ini-esq{
-    width: 60%;
-  }
-  .ini-dir{
-    width: 40%;
-    text-align: left;
-  }
-  .ini-img{
-    width: 20rem;
-  }
+    .container-body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    section {
+        max-width: 60rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .inicio {
+        display: flex;
+    }
+
+    .ini-esq {
+        width: 60%;
+    }
+
+    .ini-dir {
+        width: 40%;
+        text-align: left;
+    }
+
+    .ini-img {
+        width: 20rem;
+    }
+
     .menu {
-        display:flex;
+        display: flex;
     }
-    .cabecalho{
+
+    .cabecalho {
         z-index: 111111111111;
-        justify-content: space-between;
+        justify-content: center;
         padding: 1rem;
-        box-shadow: 0.1rem 0.1rem 1rem rgb(194, 194, 194);
     }
-    .cabecalho .menu{
+
+    .cabecalho .menu {
         list-style: none;
         gap: 1rem
     }
-    .menu ul a li{
+
+    .menu ul a li {
         text-decoration: none;
     }
+
     .mobile-menu {
         display: none;
-        
-    text-decoration: none;
+
+        text-decoration: none;
     }
-    .mobile-menu-icon{
+
+    .mobile-menu-icon {
         display: none;
     }
 }
