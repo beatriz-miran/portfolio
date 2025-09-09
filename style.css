@@ -11,7 +11,7 @@
 :root {
     --cor-corpo-light: rgb(248, 248, 248);
     --cor-botao: rgb(214, 214, 214);
-    --cor-link: rgb(27, 192, 115);
+    --cor-link: rgb(27, 192, 93);
     --cor-nav-light: rgb(255, 255, 255);
 
     --familia-font: 'Poppins';
@@ -31,7 +31,7 @@ body {
     background: var(--cor-corpo-light);
 }
 
-span {
+.span-titulo {
     font-weight: 800;
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
@@ -48,6 +48,12 @@ span {
     background-color: white;
     width: 100%;
     margin-bottom: 3rem;
+
+    background: rgba( 255, 255, 255, 0.35 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 ul a li {
@@ -140,7 +146,7 @@ li:hover {
     transition: 0.3 ease;
 }
 
-.ativo {
+li .ativo {
     border-bottom: 3px solid var(--cor-link);
 }
 
@@ -269,7 +275,7 @@ form input[type=text] {
     width: 90%;
     height: 2.5rem;
     border: none;
-    border-bottom: solid 2px var(--cor-link);
+    /*border-bottom: solid 2px var(--cor-link);*/
 }
 
 input[type=submit],
@@ -285,7 +291,7 @@ input[type=submit] {
     color: var(--cor-corpo-light)
 }
 
-ul a li {
+ul li a {
     text-decoration: none;
     color: black;
 }
@@ -359,4 +365,19 @@ ul a li {
     .mobile-menu-icon {
         display: none;
     }
+}
+
+.redes-sociais ul li{
+    list-style: none;
+    font-size: 25px;
+}
+.redes-sociais ul{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin-left: -1rem;
+}
+.span-card-proj{
+    font-weight: bolder;
 }
