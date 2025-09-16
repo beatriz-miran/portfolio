@@ -9,7 +9,7 @@
 /*VARIÁVEIS*/
 
 :root {
-    --cor-corpo-light: rgb(248, 248, 248);
+    --cor-corpo-light: rgb(156, 2, 2);
     --cor-botao: rgb(214, 214, 214);
     --cor-link: rgb(27, 192, 93);
     --cor-nav-light: rgb(255, 255, 255);
@@ -46,14 +46,17 @@ body {
     justify-content: center;
     align-items: center;
     background-color: white;
-    width: 100%;
+    width: 30%;
     margin-bottom: 3rem;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 1%;
 
     background: rgba( 255, 255, 255, 0.35 );
     backdrop-filter: blur( 13.5px );
     -webkit-backdrop-filter: blur( 13.5px );
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(52, 52, 52, 0.18);
 }
 
 ul a li {
@@ -95,11 +98,9 @@ nav ul li,
     margin-top: -3rem;
     position: absolute;
     max-width: 10rem;
-    height: 100vh;
-    animation-name: menuzinho;
+    height: 110vh;
+    transition: smooth 1.3s ease;
 }
-
-@keyframes menuzinho {}
 
 a {
     text-decoration: none;
@@ -112,8 +113,7 @@ a {
 }
 
 .mobile-menu li a {
-    font-size: 2rem;
-    margin: 2rem;
+    font-size: 0.9rem;
     text-decoration: none;
 }
 
@@ -122,12 +122,14 @@ a {
     cursor: pointer;
     background-color: transparent;
     width: 5rem;
+    z-index: 1000000000000;
 }
 
 .mobile-menu-icon button {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    z-index: 1000000000000000;
 }
 
 .icon {
@@ -154,7 +156,7 @@ li .ativo {
 /*INICIO*/
 
 .inicio {
-    margin-top: 30px;
+    margin-top: 3rem;
     padding: 1rem;
     justify-content: center;
     align-items: center;
@@ -184,7 +186,7 @@ li .ativo {
     text-align: center;
     background: var(--cor-nav-light);
     border: 2px solid var(--cor-link);
-    width: 10rem;
+    width: 5.5rem;
     padding: 1rem;
     border-radius: 1rem;
 
@@ -201,69 +203,6 @@ li .ativo {
 
 /*PROJETOS*/
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.card-content {
-    margin-inline: 1.5rem;
-    border-radius: 1.5rem;
-    flex-flow: row nowrap;
-}
-
-.card-article {
-    width: 300px;
-    border-radius: 1.5rem;
-    overflow: hidden;
-}
-
-.card-imagem {
-    position: relative;
-    background: var(--cor-link);
-    margin-top: 1rem;
-    margin-bottom: -.75rem;
-}
-
-.card-data {
-    background-color: var(--cor-botao);
-    padding: 1.5rem 2rem;
-    border-radius: 0rem 0rem 1rem;
-    text-align: center;
-    position: relative;
-    z-index: 10;
-}
-
-.card-img {
-    width: 180px;
-    height: 150px;
-    object-fit: cover;
-    margin: 0 auto;
-    position: relative;
-    z-index: 5;
-}
-
-.card-description {
-    font-size: 0.9rem;
-}
-
-.card-button {
-    background-color: var(--cor-link);
-    text-decoration: none;
-    color: var(--cor-botao);
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-}
-
-.card-button:hover,
-input[type=submit]:hover,
-input[type=reset]:hover {
-    box-shadow: 0.1rem 0.1rem 1rem var(--cor-link);
-    border: solid 2px var(--cor-link);
-    transition: 0.2s;
-}
 
 form {
     justify-content: center;
@@ -365,6 +304,10 @@ ul li a {
     .mobile-menu-icon {
         display: none;
     }
+    .card{
+        max-width: 15rem;
+    }
+
 }
 
 .redes-sociais ul li{
