@@ -9,13 +9,19 @@
 /*VARIÁVEIS*/
 
 :root {
-    --cor-corpo-light: rgb(156, 2, 2);
+    /*CORES*/
+    --cor-corpo-light: rgb(255, 246, 228);
     --cor-botao: rgb(214, 214, 214);
-    --cor-link: rgb(27, 192, 93);
+    --cor-link: rgb(41, 124, 32);
+    --cor-nav-link: rgb(0, 0, 0);
     --cor-nav-light: rgb(255, 255, 255);
+    --cor-branco-sujo: #e5e5e5;
 
+    /*FONTES*/
     --familia-font: 'Poppins';
 }
+
+/*TEXTOS E UNIVERSAIS*/
 
 h1,
 h2,
@@ -27,10 +33,6 @@ li {
     font-family: var(--familia-font);
 }
 
-body {
-    background: var(--cor-corpo-light);
-}
-
 .span-titulo {
     font-weight: 800;
     font-size: 1.5rem;
@@ -38,49 +40,52 @@ body {
     color: var(--cor-link)
 }
 
+body,
+.container-body {
+    background: var(--cor-corpo-light);
+}
+
+
 /*MENU*/
 .cabecalho {
     position: fixed;
     display: flex;
     text-align: center;
+
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: var(--cor-corpo-light);
     width: 30%;
     margin-bottom: 3rem;
     margin-left: 35%;
+    color: var(--cor-branco-sujo);
     margin-right: 35%;
     margin-top: 1%;
 
-    background: rgba( 255, 255, 255, 0.35 );
-    backdrop-filter: blur( 13.5px );
-    -webkit-backdrop-filter: blur( 13.5px );
+    background: rgba(16, 115, 26, 0.35);
+    backdrop-filter: blur(13.5px);
+    -webkit-backdrop-filter: blur(13.5px);
     border-radius: 10px;
-    border: 1px solid rgba(52, 52, 52, 0.18);
+    border: 1px solid rgba(0, 84, 17, 0.18);
 }
 
-ul a li {
+ul li a {
     text-decoration: none;
+    text-align: center;
+    color: var(--cor-nav-link);
 }
 
 nav {
     background: var(--cor-nav-light);
     justify-content: center;
-}
-
-nav ul,
-.logo {
-    text-decoration: none;
-    list-style: none;
-    display: flex;
     text-align: center;
-    justify-content: center;
 }
 
 nav ul li,
 .active {
     padding: 0.3rem 1rem;
     font-weight: 500;
+    margin-bottom: -0.1rem;
 }
 
 .menu {
@@ -94,8 +99,7 @@ nav ul li,
 .mobile-menu ul {
     flex-direction: column;
     background-color: white;
-    margin-left: -1.5rem;
-    margin-top: -3rem;
+    list-style: none;
     position: absolute;
     max-width: 10rem;
     height: 110vh;
@@ -122,14 +126,12 @@ a {
     cursor: pointer;
     background-color: transparent;
     width: 5rem;
-    z-index: 1000000000000;
 }
 
 .mobile-menu-icon button {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    z-index: 1000000000000000;
 }
 
 .icon {
@@ -156,8 +158,7 @@ li .ativo {
 /*INICIO*/
 
 .inicio {
-    margin-top: 3rem;
-    padding: 1rem;
+    padding: 4.5rem 1rem 2rem;
     justify-content: center;
     align-items: center;
 }
@@ -184,7 +185,6 @@ li .ativo {
 .hab {
     justify-content: center;
     text-align: center;
-    background: var(--cor-nav-light);
     border: 2px solid var(--cor-link);
     width: 5.5rem;
     padding: 1rem;
@@ -193,53 +193,81 @@ li .ativo {
     margin: 1rem;
 }
 
+.ico-hab {
+    font-size: 2.5rem;
+    color: var(--cor-link);
+}
+
 .hab:hover {
-    box-shadow: 0.1rem 0.1rem 1rem var(--cor-link);
+    box-shadow: 0rem 0rem 0.6rem grey;
     border: solid 2px var(--cor-link);
     background: var(--cor-corpo-light);
     transition: ease 0.5s;
-    transform: scale(1.1);
 }
 
 /*PROJETOS*/
-
-
-form {
-    justify-content: center;
-    text-align: left;
-    padding: 1rem 2rem;
+.card-body {
+    background-color: var(--cor-corpo-light);
+    border: solid 1.5px green;
+    border-radius: 0 0 0.3rem 0.3rem;
 }
 
-form input[type=text] {
-    width: 90%;
-    height: 2.5rem;
-    border: none;
-    /*border-bottom: solid 2px var(--cor-link);*/
-}
+.btn-action {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 0rem 0rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    color: var(--cor-branco-sujo);
+    font-weight: 700;
+    transition: all .5s ease 0s;
+    box-shadow: 0 10px green;
+    border: solid 2px green;
 
-input[type=submit],
-input[type=reset] {
-    padding: 0.5rem 3rem;
-    border: none;
-    border-radius: 0.5rem;
-    margin: 1rem;
-}
-
-input[type=submit] {
-    background-color: var(--cor-link);
-    color: var(--cor-corpo-light)
-}
-
-ul li a {
+    background-color: rgb(59, 183, 59);
     text-decoration: none;
-    color: black;
+    text-align: center;
+    transition: all .5s ease;
 }
 
-.botoes-form {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+
+.btn-action:hover span:before {
+    left: 0;
+    opacity: 1;
 }
+
+.btn-action:active {
+    box-shadow: 0 5px #014519;
+    transform: translateY(5px);
+}
+
+.btns-card {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/*FOOTER*/
+
+.redes-sociais ul li {
+    list-style: none;
+    font-size: 25px;
+}
+
+.redes-sociais ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin-left: -1rem;
+}
+
+.span-card-proj {
+    font-weight: bolder;
+}
+
+
+/*PARA MOBILE*/
+
 
 @media screen and (min-width: 800px) {
     .container-body {
@@ -288,11 +316,14 @@ ul li a {
 
     .cabecalho .menu {
         list-style: none;
-        gap: 1rem
+        gap: 1rem;
+        text-align: center;
+        justify-content: center;
     }
 
     .menu ul a li {
         text-decoration: none;
+        text-align: center;
     }
 
     .mobile-menu {
@@ -304,23 +335,9 @@ ul li a {
     .mobile-menu-icon {
         display: none;
     }
-    .card{
+
+    .card {
         max-width: 15rem;
     }
 
-}
-
-.redes-sociais ul li{
-    list-style: none;
-    font-size: 25px;
-}
-.redes-sociais ul{
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    width: 100%;
-    margin-left: -1rem;
-}
-.span-card-proj{
-    font-weight: bolder;
 }
