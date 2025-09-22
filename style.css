@@ -106,7 +106,7 @@ nav ul li,
     transition: smooth 1.3s ease;
 }
 
-a {
+a, button a {
     text-decoration: none;
 }
 
@@ -156,7 +156,12 @@ li .ativo {
 
 
 /*INICIO*/
-
+.botao{
+    border-radius: 0.5rem;
+    border: solid 1px #014519;
+    padding: 0.5rem 2rem;
+    background-color: rgba(0, 84, 17, 0.18);
+}
 .inicio {
     padding: 4.5rem 1rem 2rem;
     justify-content: center;
@@ -206,6 +211,10 @@ li .ativo {
 }
 
 /*PROJETOS*/
+.projetos{
+    overflow: hidden;
+    padding: 0 0.5rem;
+}
 .card-body {
     background-color: var(--cor-corpo-light);
     border: solid 1.5px green;
@@ -265,6 +274,23 @@ li .ativo {
     font-weight: bolder;
 }
 
+/*CONTATO*/
+.contato{
+    text-align: center;
+    justify-content: center;
+}
+.txtarea{
+    padding: 1rem 1rem 3rem;
+    width: 20rem;
+}
+.input-form{
+    width: 20rem;
+    padding: 0.5rem;
+}
+.botoes-form{
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+}
 
 /*PARA MOBILE*/
 
