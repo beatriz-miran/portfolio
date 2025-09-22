@@ -14,38 +14,29 @@
 
 <body>
 
-    <script src="script.js"></script>
-    <div class="cabecalho">
-        <div class="mobile-menu-icon">
-            <button onClick="menuShow()"><img src="images/menu1.png" class="icon"></button>
-        </div>
-
-        <ul class="menu active">
-
-            <li class="ativo" onClick="linhaMenu()"><a href="#sobre-mim">Sobre Mim</a></li>
-
-            <li><a href="#projetos">Projetos</a></li>
-
-
-            <li> <a href="#contato">Contato</a></li>
-
-        </ul>
-
-    </div>
-
-    <nav>
-        <div class="hamburger active" style="background-color:  rgb(255, 246, 228);"></div>
-
-        <div class="mobile-menu">
-            <ul>
-                <li class="ativo"><a href="#sobre-mim">Sobre Mim</a></li>
-
+    <header>
+        <nav class="cabecalho">
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img src="images/menu1.png" class="icon"></button>
+            </div>
+    
+            <ul class="menu">
+                <li class="ativo" onclick="linhaMenu()"><a href="#sobre-mim">Sobre Mim</a></li>
                 <li><a href="#projetos">Projetos</a></li>
-
                 <li> <a href="#contato">Contato</a></li>
             </ul>
-        </div>
-    </nav>
+    
+            <div class="mobile-menu">
+                <ul>
+                    <li class="ativo"><a href="#sobre-mim">Sobre Mim</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li> <a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <script src="script.js"></script>
 
 
     <div class="container-body">
@@ -109,7 +100,7 @@
         </section>
 
         <span class="span-titulo" id="projetos">Projetos</span>
-        <section class="projetos">
+        <section class="projetos" style="position: relative; z-index: 1;">
             <div class="text-center">
                 <div class="row">
                     <div class="col">

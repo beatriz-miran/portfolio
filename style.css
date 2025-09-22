@@ -51,6 +51,7 @@ body,
     position: fixed;
     display: flex;
     text-align: center;
+    z-index: 100;
 
     justify-content: center;
     align-items: center;
@@ -94,38 +95,43 @@ nav ul li,
 
 .mobile-menu {
     display: none;
+    position: absolute;
+    height: 100vh;
+    margin-top: 35rem;
+    width: 500%;
 }
 
-.mobile-menu ul {
+.mobile-menu ul{
     flex-direction: column;
-    background-color: white;
+    background-color: rgba(4, 42, 0, 0.879);
     list-style: none;
-    position: absolute;
-    max-width: 10rem;
+    width: 100%;
     height: 110vh;
     transition: smooth 1.3s ease;
+    z-index: 99;
+
+    text-align: center;
+    padding-top: 40vh;
+    text-decoration: none;
 }
 
 a, button a {
     text-decoration: none;
 }
 
-.mobile-menu ul {
-    text-align: center;
-
-    text-decoration: none;
-}
-
 .mobile-menu li a {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
     text-decoration: none;
 }
 
 .mobile-menu-icon {
-    display: block;
+    display: absolute;
     cursor: pointer;
     background-color: transparent;
     width: 5rem;
+    z-index: 100;
 }
 
 .mobile-menu-icon button {
@@ -214,11 +220,18 @@ li .ativo {
 .projetos{
     overflow: hidden;
     padding: 0 0.5rem;
+
+    z-index: 1;
+}
+.row, .col, .card{
+    position: relative;
+    z-index: 1;
 }
 .card-body {
     background-color: var(--cor-corpo-light);
     border: solid 1.5px green;
     border-radius: 0 0 0.3rem 0.3rem;
+    z-index: 1;
 }
 
 .btn-action {
