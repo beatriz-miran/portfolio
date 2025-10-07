@@ -10,12 +10,12 @@
 
 :root {
     /*CORES*/
-    --cor-corpo-light: rgb(255, 246, 228);
+    --cor-corpo-light:#f9f6f1;
     --cor-botao: rgb(214, 214, 214);
-    --cor-link: rgb(41, 124, 32);
-    --cor-nav-link: rgb(0, 0, 0);
+    --cor-link:#6ca183;
+    --cor-titulo: #c3e471;
+    --cor-nav-link: #072224;
     --cor-nav-light: rgb(255, 255, 255);
-    --cor-branco-sujo: #e5e5e5;
 
     /*FONTES*/
     --familia-font: 'Poppins';
@@ -32,6 +32,9 @@ span,
 li {
     font-family: var(--familia-font);
 }
+p, h4{
+    color: var(--cor-nav-link);  
+}
 
 .span-titulo {
     font-weight: 800;
@@ -45,6 +48,9 @@ body,
     background: var(--cor-corpo-light);
 }
 
+.beatriz, .span-titulo{
+    color: var(--cor-titulo)
+}
 
 /*MENU*/
 .cabecalho {
@@ -63,7 +69,7 @@ body,
     margin-right: 35%;
     margin-top: 1%;
 
-    background: rgba(16, 115, 26, 0.35);
+    background: var(--cor-link);
     backdrop-filter: blur(13.5px);
     -webkit-backdrop-filter: blur(13.5px);
     border-radius: 10px;
@@ -73,13 +79,15 @@ body,
 ul li a {
     text-decoration: none;
     text-align: center;
-    color: var(--cor-nav-link);
+    justify-content: center;
+    color: var(--cor-nav-link);   
 }
 
 nav {
     background: var(--cor-nav-light);
     justify-content: center;
     text-align: center;
+    display: flex;
 }
 
 nav ul li,
@@ -117,6 +125,7 @@ nav ul li,
 
 a, button a {
     text-decoration: none;
+    color: var(--cor-nav-link);  
 }
 
 .mobile-menu li a {
@@ -166,7 +175,8 @@ li .ativo {
     border-radius: 0.5rem;
     border: solid 1px #014519;
     padding: 0.5rem 2rem;
-    background-color: rgba(0, 84, 17, 0.18);
+    background-color: var(--cor-link);
+    color: var(--cor-nav-link);  
 }
 .inicio {
     padding: 4.5rem 1rem 2rem;
@@ -286,7 +296,9 @@ li .ativo {
 .span-card-proj {
     font-weight: bolder;
 }
-
+footer{
+    background-color: var(--cor-link);
+}
 /*CONTATO*/
 .contato{
     text-align: center;
@@ -295,10 +307,12 @@ li .ativo {
 .txtarea{
     padding: 1rem 1rem 3rem;
     width: 20rem;
+    border-radius: 0.5rem;
 }
 .input-form{
     width: 20rem;
     padding: 0.5rem;
+    border-radius: 0.5rem;
 }
 .botoes-form{
     margin-bottom: 0;
@@ -345,6 +359,11 @@ li .ativo {
 
     .menu {
         display: flex;
+        margin-left: -2rem;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        margin-top: 0.5rem;
     }
 
     .cabecalho {
